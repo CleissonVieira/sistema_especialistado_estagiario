@@ -1,7 +1,17 @@
 class Diagnostico():
 	# metodo construtor
 	def __init__(self):
-		self.resultado = ['cansado', 'estressado', 'deprimido', 'faminto','saudavel']
+		self.resultado = ['funcionamentoNormal', 
+						  'problemaPlacaMae', 
+						  'checarProcessadorEMemoriaRam',
+						  'hdSsdDesconectadoOuComDefeito',
+						  'ajustarBoot',
+					      'substituirHdSsd',
+						  'imagemOsCorrompida',
+						  'conectarAlimentacao',
+						  'fonteQueimada',
+						  'fonteComProblema',
+	                      'checarCircuitoDeAlimentacaoDaPlacaMae']
 		self.pessoa = []
 		self.db = []
 		# abre o arquivo db.txt em modo leitura e passa os dados para
