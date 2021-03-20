@@ -5,11 +5,13 @@ from classPerguntas import *
 se = Diagnostico()
 pergunta = Pergunta()
 
+proxPergunta = 'computador_liga'
 
-while se.probabilidade() != 100:
-	string = pergunta.texto()
-	se.pergunta(string[0],string[1])
-	print('probabilidade é %d' %(se.probabilidade()))
-	print(se.resultado)
-	if se.probabilidade() == 100:
-		print('Diagnostico: ',se.resultado[0])
+while proxPergunta != 'Fim':
+	string = pergunta.texto(proxPergunta)
+	proxPergunta = se.pergunta(string[0],string[1])
+
+
+print(string[1])
+
+
