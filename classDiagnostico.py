@@ -12,10 +12,7 @@ class Diagnostico():
 				(self.db).append(linha.split('-'))
 		arquivo.close()
 
-	# imprime a quantidade de possibilidades cadastradas
-	def tamanho(self):
-		print(len(self.resultado))
-	
+	# faz a busca no banco de dados, com base na pergunta e resposta	
 	def buscaDb(self, resposta, caract):	
 		for i in range(len(self.db)):
 			if caract == self.db[i][0]:
@@ -23,14 +20,15 @@ class Diagnostico():
 					return self.db[i][2]
 		return 'Fim'
 
+	# dependendo a resposta já busca a próxima pergunta
 	def proxPergunta(self, resposta, caract):
 		pergunta = self.buscaDb(resposta, caract)	
 		return pergunta
-		
+
+	# responsável pela obter a resposta do usuário e por buscar a próxima pergunta
 	def pergunta(self,caract, pergunta):
 		if self.proxPergunta('sim', caract) == 'Fim':
-			return 'Fim'
-	
+			return 'Fim'	
 		resp = input(pergunta)
 		if resp == 'sim' or resp == 'Sim':
 			return self.proxPergunta('sim', caract)
