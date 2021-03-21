@@ -1,0 +1,13 @@
+Casos de teste:
+Não não não (conectar alimentação)
+não não sim (fonte queimada)
+não sim não (fonte com problema)
+não sim sim (circuito placa mãe)
+sim sim sim não (so corrompido)
+sim sim sim sim (normal)
+sim sim não sim sim sim (so corrompido)
+sim sim não sim sim não (subst hd)
+sim sim não sim não (boot)
+sim sim não não (hd desconectado)
+sim não sim (ram e processador)
+sim não não (placa mãe)
